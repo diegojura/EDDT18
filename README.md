@@ -1,18 +1,27 @@
-## Getting Started
+# Explicación de los Merges en el Árbol de Git
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. **Primer Commit**
+   - Todo comienza con el primer commit, marcado como `primer commit`.
+   - Es la base de donde se derivarán todas las demás ramas y commits.
 
-## Folder Structure
+2. **Rama Develop**
+   - Se crea una rama llamada `develop` a partir del commit inicial.
+   - Esta rama sirve como base para el desarrollo e integración de características.
 
-The workspace contains two folders by default, where:
+3. **Ramas de Características**
+   - Se crean tres ramas de características (`feature1`, `feature2`, `feature2.2`) a partir de `develop`.
+   - Estas ramas se utilizan para desarrollar nuevas características de forma independiente.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+4. **Rama Hotfix**
+   - Se crea una rama llamada `hotfix` a partir del commit inicial para hacer correcciones urgentes.
+   - Luego se fusiona de nuevo en `develop`, asegurando que las correcciones se incluyan en los futuros desarrollos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+5. **Rama Develop 2**
+   - La rama llamada `develop` se actualiza fusionando `feature2.2` en ella.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+6. **Ramas de Lanzamiento**
+   - Se crea una rama de lanzamiento llamada `release` a partir de `develop` para preparar un lanzamiento de producción.
+   - Luego se fusiona en `main`, marcando un lanzamiento oficial.
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+7. **Main con Release 2**
+   - La rama 'main' ahora contiene todas las actualizaciones hechas en 'release', indicando que se ha lanzado otra actualización o versión oficial.
